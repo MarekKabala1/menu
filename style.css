@@ -74,7 +74,6 @@ li {
   list-style: none;
 }
 .head_nav-li {
-<<<<<<< HEAD
   position: absolute;
   top: 0;
   right: 0;
@@ -93,9 +92,6 @@ li {
 }
 .conteiner-active {
   transform: translateX(-50%);
-=======
- display:none;
->>>>>>> 360304aa7554c4980d9d7091491967d606899a83
 }
 .head-text {
   font-size: 1.5rem;
@@ -103,7 +99,7 @@ li {
   color: rgb(255, 0, 255);
   letter-spacing: 0.3rem;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.32rem;
 }
 .head_nav-wrapper {
   margin-top: 0.5rem;
