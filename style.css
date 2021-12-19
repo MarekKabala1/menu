@@ -36,10 +36,9 @@ html {
     rgba(21, 1, 249, 0.3) 0%,
     rgba(241, 206, 206, 1) 100%
   );
-  /* background: rgba(250, 155, 171, 0.7); */
   padding: 0.5rem 1rem;
-  clip-path: polygon(50% 70%, 100% 50%, 100% 0, 0 0, 0 50%);
-  transition: transform 0.5s ease-in-out;
+  clip-path: polygon(50% 60%, 100% 50%, 100% 0, 0 0, 0 50%);
+  transition: all 0.7s ease-in-out;
 }
 img {
   width: 75px;
@@ -47,56 +46,9 @@ img {
   margin-right: 4rem;
 }
 
-.head_hamburger-conteiner > div {
-  /* border: 1px solid rgb(21, 1, 249, 0.7); */
-  border-radius: 50px;
-  background-color: rgba(21, 1, 249, 0.7);
-  width: 1.2rem;
-  height: 0.17rem;
-  color: rgb(255, 0, 255);
-  cursor: pointer;
-  z-index: 5;
-  transform-origin: center;
-}
-.line-two {
-  margin: 0.4rem 0;
-}
-/* .line-two::after {
-  content: "";
-  border: 1px solid rgba(21, 1, 249, 0.7);
-  width: 0.5rem;
-  height: 0.5rem;
-} */
 .head_hamburger-conteiner {
   cursor: pointer;
-  padding-top: 0.5rem;
-  z-index: 5;
   transition: transform 1s ease-in-out;
-  transform-style: preserve-3D;
-  position: relative;
-}
-.active-rotate {
-  /* transform: rotate(-360deg); */
-  animation: rotate 1s;
-}
-.active .line-one {
-  transform: rotate(-45deg) translate(-13px, 1px);
-}
-.active .line-two {
-  transform: translateX(150px);
-}
-.active .line-three {
-  transform: rotate(45deg) translate(-11px, 1px);
-}
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  to {
-    transform: rotate(-360deg);
-    opacity: 0;
-  }
 }
 a {
   text-decoration: none;
@@ -120,7 +72,7 @@ li {
   height: 100vh;
   width: 50%;
   transform: translateX(100%);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.7s ease-in-out;
 }
 .nav-active {
   transform: translateX(0%);
@@ -138,4 +90,40 @@ li {
 }
 .head_nav-wrapper {
   margin-top: 0.5rem;
+}
+/* svg */
+.line {
+  display: inline;
+  fill: none;
+  stroke: rgba(21, 1, 249, 0.6);
+  stroke-width: 2px;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-opacity: 1;
+  border-radius: 10px;
+}
+path {
+  stroke-dasharray: 25 50;
+  stroke-dashoffset: 0;
+}
+.x #middle {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.x #top,
+.x #bottom {
+  stroke-dashoffset: -45;
+}
+#top,
+#bottom {
+  transition: stroke-dashoffset 0.7s ease-in-out;
+}
+
+#middle {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+svg {
+  cursor: pointer;
 }
